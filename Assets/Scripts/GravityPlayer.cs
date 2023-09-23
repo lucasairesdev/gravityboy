@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class GravityPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    void GravityInvert() {
+        Physics2D.gravity = new Vector2(Physics2D.gravity.x, Physics2D.gravity.y * -1);
+    }
+
+
+    void InputGravity() {
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            GravityInvert();
+        }
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        InputGravity();
     }
 }

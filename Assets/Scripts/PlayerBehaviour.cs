@@ -20,7 +20,7 @@ public class PlayerBehaviour : MonoBehaviour {
         if (!isGrounded) {
             return;
         }
-        myRigidbody.velocity = new Vector2(myRigidbody.velocity.x,jumpForce);
+        myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, Physics2D.gravity.y < 0 ? jumpForce : jumpForce * -1);
     }
     
     public void MovimentPlayer(bool right) {
