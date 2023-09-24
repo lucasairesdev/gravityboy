@@ -9,8 +9,6 @@ public class PlayerBehaviour : MonoBehaviour {
     [SerializeField] float jumpForce = 8;
     bool isGrounded;
 
-
-
     private void Start() {
         myRigidbody = GetComponent<Rigidbody2D>();
         myRigidbody.velocity = new Vector2(0, 0);
